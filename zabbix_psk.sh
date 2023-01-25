@@ -13,6 +13,7 @@ echo $psk > /etc/zabbix/psk/psk.txt
 echo "TLSConnect=psk" >> /etc/zabbix/zabbix_agentd.conf
 echo "TLSPSKIdentity=$HOSTNAME" >> /etc/zabbix/zabbix_agentd.conf
 echo "TLSPSKFile=/etc/zabbix/psk/psk.txt" >> /etc/zabbix/zabbix_agentd.conf
+echo "TLSAccept=psk" >> /etc/zabbix/zabbix_agentd.conf
 
 # Restart agent
 systemctl restart zabbix-agent
